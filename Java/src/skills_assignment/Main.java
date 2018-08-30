@@ -1,36 +1,28 @@
 package skills_assignment;
-import javax.swing.*;
-import javax.swing.border.LineBorder;
-import java.awt.*;
-public class Main extends BaseFrame {
-    boolean check = false;
-    JLabel lbImg = createComponent(new JLabel(), 200, 200);
-    JButton btnMeat = createButton("굽기", e -> clickChange());
 
-    Main() {
-        super(250, 300, "고기굽기");
-        setLayout(new FlowLayout());
-        add(lbImg);
-        add(btnMeat);
-        lbImg.setBorder(new LineBorder(Color.black));
-        clickChange();
-    }
+public class Main {
 
-    public void clickChange() {
-        String imgName = "", btnName = "";
-        if (check == false) {
-            imgName = "안익힌고기";
-            btnName = "굽기";
-            check = true;
-        } else {
-            imgName = "익힌고기";
-            btnName = "초기화";
-            check = false;
+    public static void main(String[]$) {
+        int arr[] = new int[5];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i]= i+1;
+            System.out.println(System.identityHashCode(arr[i]));
         }
-        lbImg.setIcon(getImage(200, 200, "./Datafiles/"+imgName+".PNG"));
-        btnMeat.setText(btnName);
+
+        swap(arr, 0, 4);
+
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+            System.out.println(System.identityHashCode(arr[i]));
+        }
+
     }
-    public static void main(String[] args) {
-        new Main().setVisible(true);
+
+    static void swap(int arr[],int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
+
 }
