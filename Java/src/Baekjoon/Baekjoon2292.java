@@ -4,17 +4,21 @@ import java.util.Scanner;
 
 public class Baekjoon2292 {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		
-		int input = sc.nextInt();
-		int cnt = 2;
-		for (int i = 1; i <= 5; i++) {
-			input -= 6 * i;
-			if (input<= 1) {
+		Scanner scanner = new Scanner(System.in);
+		int input = scanner.nextInt();
+		scanner.close();
+		System.out.println(solution_beehouse(input));
+	}
+
+	public static int solution_beehouse(int n) {
+		if (n == 1)
+			return 1;
+		int result = 1;
+		for (int i = 1; i <= n; i++) {
+			result += (i - 1) * 6;
+			if (n <= result)
 				break;
-			}
-			cnt++;
 		}
-		System.out.println(cnt);
+		return result;
 	}
 }

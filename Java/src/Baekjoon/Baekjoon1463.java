@@ -6,22 +6,33 @@ public class Baekjoon1463 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-
 		int n = sc.nextInt();
+		sc.close();
 
-		int[] min = new int[1000001];
-		min[1] = 0;
+		if (n < 100) {
+			System.out.println(n);//100 보다 작은 수는 다 한수
+		} else {
+			int result = 99;// 100 보다 클 때 100밑은 다 한수이므로 99부터 시작
 
-		for (int i = 2; i < n + 1; i++) {
-			min[i] = min[i - 1] + 1;
-			if (i % 2 == 0 && min[i / 2] + 1 < min[i]) {
-				min[i] = min[i / 2] + 1;
+			for (int i = 100; i <= n; ++i) {
+				result += checkHanNumber(i);//한수 인지 체크하고 result에 더하기 
 			}
-			if (i % 3 == 0 && min[i / 3] + 1 < min[i]) {
-				min[i] = min[i / 3] + 1;
-			}
+
+			if (n == 1000)//1000은 제외
+				result--;
+
+			System.out.println(result);
 		}
-		System.out.println(min[n]);
 	}
 
+	private static int checkHanNumber(int number) {
+		int num1 = number / 100 % 10;
+		int num2 = number / 10 % 10;
+		int num3 = number % 10;
+
+		if (num2 * 2 == num1 + num3) {
+			return 1;
+		}
+		return 0;
+	}
 }

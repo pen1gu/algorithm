@@ -16,7 +16,6 @@ public class Baekjoon1546 {
 				max = arr[i];
 			}
 		}
-
 		for (int i = 0; i < N; i++) {
 			M += arr[i] / max * 100.0;
 		}
