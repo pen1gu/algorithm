@@ -29,15 +29,32 @@ public class LinkedList {
         }
     }
 
+    public void addLast(Object input) {
+        Node newNode = new Node(input);
+        if (size == 0) {
+            addFirst(input);
+        } else {
+            // 마지막 노드의 다음 노드로 생성한 노드를 지정합니다.
+            tail.next = newNode;
+            // 마지막 노드를 갱신합니다.
+            tail = newNode;
+            // 엘리먼트의 개수를 1 증가 시킵니다.
+            size++;
+        }
+    }
+
     public void add(Object input) {
         Node newNode = new Node(input);
         newNode.next = tail;
+        tail = newNode;
+        size++;
     }
 
-    public Node getSize() {
-        return tail;
+    public Object get(int index) {
+        return null;
     }
 
-    public static void main(String[] args) {
+    public Integer length() {
+        return size;
     }
 }
