@@ -24,7 +24,6 @@ public class Baekjoon2447 {
     }
 
     static void star(int x, int y, int N, boolean blank) {
-
         // 공백칸일 경우
         if (blank) {
             for (int i = x; i < x + N; i++) {
@@ -35,12 +34,11 @@ public class Baekjoon2447 {
             return;
         }
 
-        // 더이상 쪼갤 수 없는 블록일 때
         if (N == 1) {
             arr[x][y] = '*';
             return;
         }
- 
+
 		/*
 		   N=27 일 경우 한 블록의 사이즈는 9이고, 
 		   N=9 일 경우 한 블록의 사이즈는 3이듯
