@@ -11,7 +11,7 @@ public class BaseFrame extends JFrame {
         setSize(width, height);
         setTitle(title);
         setLocationRelativeTo(null);
-        setDefaultCloseOperation(2);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     public void errorMessage(String msg) {
