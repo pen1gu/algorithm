@@ -6,6 +6,7 @@ public class Main extends BaseFrame {
     boolean check = false;
     JLabel lbImg = createComponent(new JLabel(), 200, 200);
     JButton btnMeat = createButton("굽기", e -> clickChange());
+
     Main() {
         super(250, 300, "고기굽기");
         setLayout(new FlowLayout());
@@ -14,6 +15,7 @@ public class Main extends BaseFrame {
         lbImg.setBorder(new LineBorder(Color.black));
         clickChange();
     }
+
     public void clickChange() {
         String imgName = "", btnName = "";
         if (check == false) {
