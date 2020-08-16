@@ -16,9 +16,9 @@ public class Baekjoon4153 {
 
             if (x == 0 && y == 0 && z == 0) break;
 
-            if ((x * x) + (y * y) == (z * z)) {
+            if ((z * z) == (y * y) + (x * x)) {
                 print_text = "right";
-            } else if ((x + x) == (y * y) + (z * z)) {
+            } else if ((x * x) == (y * y) + (z * z)) {
                 print_text = "right";
             } else if ((y * y) == (x * x) + (z * z)) {
                 print_text = "right";
@@ -30,4 +30,3 @@ public class Baekjoon4153 {
         scanner.close();
     }
 }
-
