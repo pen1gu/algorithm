@@ -1,26 +1,20 @@
 package Baekjoon;
 
-import java.util.Scanner;
-
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 public class Baekjoon2747 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(fibo(scanner.nextInt()));
-        scanner.close();
+    static double[] data;
+    public static void main(String[] args) throws Exception{
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(bufferedReader.readLine());
+        bufferedReader.close();
+        data = new double[n + 1];
+        System.out.printf("%.0f",fibo(n));
     }
-
-    public static long fibo(long n) {
-        fiboDpArray = new int[fiboCnt + 1];
-
-        fiboDpArray[0] = 0;
-        fiboDpArray[1] = 1;
-
-        if (fiboCnt > 1) {
-            for (int i = 2; i <= fiboCnt; i++) {
-                fiboDpArray[i] = fiboDpArray[i - 2] + fiboDpArray[i - 1];
-            }
-        }
-
-        return fiboDpArray[fiboCnt];
+    public static double fibo(int n){
+        if (n==0) return 0;
+        if (n <= 2) return 1;
+        if (data[n] == 0) data[n] = fibo(n-1) + fibo(n-2);
+        return data[n];
     }
 }
