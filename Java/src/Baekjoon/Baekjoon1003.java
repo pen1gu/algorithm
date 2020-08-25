@@ -1,42 +1,38 @@
 package Baekjoon;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Baekjoon1003 {
-    BufferedReader bf;
-    int zcnt = 0, ocnt = 0;
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-    Baekjoon1003() throws Exception {
-        bf = new BufferedReader(new InputStreamReader(System.in));
-        int tc = Integer.parseInt(bf.readLine());
-        for (int i = 0; i < tc; i++) {
-            zcnt = 0;
-            ocnt = 0;
-            int n = Integer.parseInt(bf.readLine());
-            fibo(n);
-            System.out.println(zcnt+" "+ocnt);
-        }
-        bf.close();
-    }
+        int n = Integer.parseInt(bufferedReader.readLine());
+        int[] arr = new int[n];
 
-    public static void main(String[] args) {
-        try {
-            new Baekjoon1003();
-        } catch (Exception e) {
-            e.printStackTrace();
+        for (int i = 0; i < n; i++) {
+            arr[i] = Integer.parseInt(bufferedReader.readLine());
         }
 
-    }
+        int[] zeroCount = new int[41];
+        int[] oneCount = new int[41];
 
-    int fibo(int n) {
-        if (n == 0) {
-            zcnt++;
-            return 0;
-        } else if (n == 1) {
-            ocnt++;
-            return 1;
+        zeroCount[0] = 1;
+        zeroCount[1] = 0;
+
+        oneCount[0] = 0;
+        oneCount[1] = 1;
+
+        for (int j = 2; j < 41; j++) {
+            zeroCount[j] = zeroCount[j - 1] + zeroCount[j - 2];
+            oneCount[j] = oneCount[j - 1] + oneCount[j - 2];
         }
-        return fibo(n - 1) + fibo(n - 2);
+
+        for (int k = 0; k < arr.length; k++) {
+            System.out.println(zeroCount[arr[k]] + " " + oneCount[arr[k]]);
+        }
+
+        bufferedReader.close();
     }
 }
