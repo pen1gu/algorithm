@@ -5,36 +5,34 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Baekjoon1003 {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
-    static BufferedReader bf;
+        int n = Integer.parseInt(bufferedReader.readLine());
+        int[] arr = new int[n];
 
-    public static void main(String[] args) throws NumberFormatException, IOException {
-        bf = new BufferedReader(new InputStreamReader(System.in));
-        int tc = Integer.parseInt(bf.readLine());
-        for (int i = 0; i < tc; i++) {
-            int n = Integer.parseInt(bf.readLine());
-
-            int[][] arr = new int[n + 1][2];
-
-            if (n == 0) {
-                System.out.println("1 0");
-                continue;
-            }
-
-            if (n == 1) {
-                System.out.println("0 1");
-                continue;
-            }
-
-            arr[0][0] = 1;
-            arr[1][1] = 1;
-
-            for (int j = 2; j <= n; j++) {
-                arr[i][0] = arr[j - 1][0] + arr[j - 2][0];
-                arr[i][1] = arr[i - 1][1] + arr[i - 2][1];
-            }
-
-            System.out.println(arr[n][0] + " " + arr[n][1]);
+        for (int i = 0; i < n; i++) {
+            arr[i] = Integer.parseInt(bufferedReader.readLine());
         }
+
+        int[] zeroCount = new int[41];
+        int[] oneCount = new int[41];
+
+        zeroCount[0] = 1;
+        zeroCount[1] = 0;
+
+        oneCount[0] = 0;
+        oneCount[1] = 1;
+
+        for (int j = 2; j < 41; j++) {
+            zeroCount[j] = zeroCount[j - 1] + zeroCount[j - 2];
+            oneCount[j] = oneCount[j - 1] + oneCount[j - 2];
+        }
+
+        for (int k = 0; k < arr.length; k++) {
+            System.out.println(zeroCount[arr[k]] + " " + oneCount[arr[k]]);
+        }
+
+        bufferedReader.close();
     }
 }
