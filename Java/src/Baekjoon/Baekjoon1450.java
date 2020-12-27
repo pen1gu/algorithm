@@ -1,35 +1,50 @@
 package Baekjoon;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Baekjoon1450 {
 
     static int items[][];
     static int dp[][];
-    static int weight = 0;
-    static int V = 1;
-    static int N = 5;
+    static int cnt = 1;
+    final static int WEIGHT = 0;
+    static int N;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int capacity = scanner.nextInt();
-        System.out.println(knapsack(0,capacity));
+        N = scanner.nextInt();
+        int C = scanner.nextInt();
+
+        items = new int[N][1];
+        dp = new int[N][C + 1];
+
+        for (int i = 0; i < N; i++) {
+            items[i][WEIGHT] = scanner.nextInt();
+            dp[i][WEIGHT] = -1;
+        }
+        knapsack(0, C);
+        System.out.println(cnt);
+        scanner.close();
     }
 
-    static int knapsack(int pos, int capacity) {
-        if (pos == N) return 0;
+    static int knapsack(int index, int C) {
+        if (index == N) return 0;
 
-        int ret = dp[pos][capacity];
-        if (ret != -1) return ret;
-        if (items[pos][weight] <= capacity)
-            ret = knapsack(pos + 1, capacity - items[pos][weight])
-                    + items[pos][V];
-        ret = MAX(ret, knapsack(pos + 1, capacity));
-        return dp[pos][capacity]=ret;
+        int ret = dp[index][WEIGHT]; // ret 변수에
+        if (ret != -1) {
+            return ret;
+        }
+
+        if (items[index][WEIGHT] <= C) {
+            ret = knapsack(index + 1, C - items[index][WEIGHT]);
+        }
+        ret = MAX(ret, knapsack(index + 1, C));
+        cnt++;
+        return dp[index][C] = ret;
     }
 
-    public static Integer MAX(int a, int b)    {
+    public static Integer MAX(int a, int b) {
         return a > b ? a : b;
     }
 }

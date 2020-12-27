@@ -1,15 +1,18 @@
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-	int input = 0;
-	scanf("%d", &input);
-	int ycnt = 0, ncnt = 0;
-	for (int i = 0; i < input; i++) {
-		int n = 0;
-		scanf("%d", &n);
-		if (n == 0) ycnt++;
-		else ncnt++;
-	}
-	printf(ncnt > ycnt ? "Junhee is cute!" : "Junhee is not cute!");
-	return 0;
+
+    char a[20];
+
+    // 1바이트마다 모두 65로 초기화
+    // 배열을 채울 때는 sizeof()함수를 사용하면 됩니다.
+    // sizeof 함수 - 배열의 전체 바이트 크기를 반환합니다.
+    memset(a, 65, sizeof(a));
+
+    // 출력을 통해 확인
+    for (int i = 0; i < (sizeof(a) / sizeof(char)); i++) {
+        printf("%c\n", a[i]);
+    }
+
 }
