@@ -1,4 +1,4 @@
-package Baekjoon;
+package baekjoon;
 
 import java.time.LocalTime;
 import java.util.Scanner;

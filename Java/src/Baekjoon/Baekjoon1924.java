@@ -1,4 +1,4 @@
-package Baekjoon;
+package baekjoon;
 
 import java.util.Calendar;
 import java.util.Scanner;

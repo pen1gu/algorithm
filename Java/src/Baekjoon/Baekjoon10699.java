@@ -1,4 +1,4 @@
-package Baekjoon;
+package baekjoon;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
