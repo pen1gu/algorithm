@@ -1,4 +1,4 @@
-package Baekjoon;
+package baekjoon;
 
 public class Baekjoon15596 {
 	public static void main(String[] args) {
