@@ -1,4 +1,4 @@
-package myproject;
+package alogrithm_skills;
 
 public class GCD {
     public static void main(String[] args) {

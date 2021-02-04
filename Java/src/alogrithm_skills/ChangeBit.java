@@ -1,4 +1,4 @@
-package myproject;
+package alogrithm_skills;
 
 import java.util.Arrays;
 import java.util.Scanner;
