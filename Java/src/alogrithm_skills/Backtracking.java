@@ -1,9 +1,9 @@
-package myproject;
+package alogrithm_skills;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Solution {
+public class Backtracking {
 
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> ret = new ArrayList<>();
