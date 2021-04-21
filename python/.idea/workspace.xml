@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="517da01f-63fc-43e3-b131-d0601b129dd4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java/src/Baekjoon/Baekjoon2447_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Java/src/inflearn/recursion/Code1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/src/Baekjoon/Baekjoon2447.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/src/Baekjoon/Baekjoon2447.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +113,7 @@
       <workItem from="1625619812550" duration="2775000" />
       <workItem from="1625660932896" duration="1753000" />
       <workItem from="1626000649944" duration="1003000" />
+      <workItem from="1626313100047" duration="52000" />
     </task>
     <servers />
   </component>
