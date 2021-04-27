@@ -21,7 +21,7 @@ def binary_search(target, data):
 
     return 0
 
- 
+
 result = ''
 for i in sg_arr:
     result += str(binary_search(i, num_arr)) + " "
