@@ -14,4 +14,8 @@ for i in numArr:
         if numArr[i] == selectedArr[j]:
             numArr.pop(i)
             count += 1
+<<<<<<< HEAD
     print(count)
+=======
+    print(count)
+>>>>>>> b814fea120410ae197a5f421813617e20ab25c0c
