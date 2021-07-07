@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="517da01f-63fc-43e3-b131-d0601b129dd4" name="Default Changelist" comment="" />
+    <list default="true" id="517da01f-63fc-43e3-b131-d0601b129dd4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Java/test/baekjoon_testing/baekjoon10250/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/code.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/code.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Java/src/baekjoon_testing/baekjoon10250/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java/src/baekjoon_testing/baekjoon10250/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,6 +106,7 @@
       <workItem from="1620358327957" duration="83000" />
       <workItem from="1620358419554" duration="1748000" />
       <workItem from="1621217342398" duration="2556000" />
+      <workItem from="1625619812550" duration="372000" />
     </task>
     <servers />
   </component>
