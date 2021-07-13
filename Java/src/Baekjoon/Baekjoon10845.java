@@ -1,5 +1,8 @@
 package baekjoon;
 
+import java.awt.event.ContainerAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -46,5 +49,46 @@ public class Baekjoon10845 {
         }
         System.out.println(stringBuilder.toString());
         bufferedReader.close();
+    }
+
+
+}
+
+
+class Test {
+    public Test() {
+        Bot bot = new Bot();
+    }
+}
+
+
+class Bot implements MouseListener {
+    public Bot() {
+
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+
     }
 }
