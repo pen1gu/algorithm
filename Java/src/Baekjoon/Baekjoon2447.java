@@ -7,20 +7,20 @@ public class Baekjoon2447 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int N = scanner.nextInt();
+        int N = scanner.nextInt(); // 입력
 
         arr = new char[N][N];
 
         star(0, 0, N, false);
 
-        StringBuilder sb = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
-                sb.append(arr[i][j]);
+                stringBuilder.append(arr[i][j]);
             }
-            sb.append('\n');
+            stringBuilder.append('\n');
         }
-        System.out.print(sb);
+        System.out.print(stringBuilder);
     }
 
     static void star(int x, int y, int N, boolean blank) {
