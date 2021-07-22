@@ -10,18 +10,20 @@ public class Baekjoon1193 {
 
         while (true) {
             if (input <= prevCountSum + crossCount) {
+
+
                 if (crossCount % 2 == 1) {
                     System.out.println((crossCount - (input - prevCountSum - 1) + "/" + (input - prevCountSum)));
+                    //
                     break;
                 } else {
-                    System.out.println((crossCount - (input - prevCountSum - 1) + "/" + (input - prevCountSum)));
+                    System.out.println((input - prevCountSum) + "/" + (crossCount - (input - prevCountSum - 1)));
                     break;
                 }
             } else {
                 prevCountSum += crossCount;
                 crossCount++;
             }
-
         }
     }
 
@@ -33,6 +35,4 @@ public class Baekjoon1193 {
         Baekjoon1193 b = new Baekjoon1193();
         b.solution(input);
     }
-
-
 }
