@@ -8,37 +8,31 @@ public class Baekjoon11866 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        Queue<Integer> q = new LinkedList<>();
+        Queue<Integer> queue = new LinkedList<>();
 
         int N = scanner.nextInt();
         int K = scanner.nextInt();
 
 
         for (int i = 1; i <= N; i++) {
-            q.add(i);
+            queue.add(i);
         }
 
-        StringBuilder sb = new StringBuilder();
-        sb.append('<');
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("<");
 
-        /*
-         *  마지막 부분의 출력은 > 괄호 전에 공백이 없기 때문에
-         *  일괄적으로 출력하기 위해 마지막 원소만 남겨질 때까지만
-         *  반복하고 마지막 원소는 그대로 출력한다.
-         */
-        while (q.size() > 1) {
+        while (queue.size() > 1) {
 
             for (int i = 0; i < K - 1; i++) {
-                int val = q.poll();
-                q.offer(val);
+                int val = queue.poll();
+                queue.offer(val);
             }
 
-            sb.append(q.poll()).append(", ");
+            stringBuilder.append(queue.poll()).append(", ");
         }
 
-        // 마지막 원소 출력한 뒤 > 도 붙여준다.
-        sb.append(q.poll()).append('>');
-        System.out.println(sb);
+        stringBuilder.append(queue.poll()).append(">");
+        System.out.println(stringBuilder);
 
         scanner.close();
     }

@@ -1,22 +1,24 @@
 package baekjoon;
 
-import java.util.ArrayDeque;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.Deque;
-import java.util.Scanner;
+import java.util.LinkedList;
 
 public class Baekjoon10866 {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws Exception {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int n = scanner.nextInt();
+        int n = Integer.parseInt(bufferedReader.readLine());
 
-        scanner.nextLine();
-
-        Deque<Integer> deque = new ArrayDeque<Integer>();
+        Deque<Integer> deque = new LinkedList<>();
 
         for (int i = 0; i < n; i++) {
-            String[] input = scanner.nextLine().split(" ");
+            String[] input = bufferedReader.readLine().split(" ");
 
             if (input.length > 1) {
                 if (input[0].equals("push_back")) {
@@ -48,6 +50,7 @@ public class Baekjoon10866 {
             }
         }
 
-        scanner.close();
+        bufferedReader.close();
+        bufferedWriter.close();
     }
 }
