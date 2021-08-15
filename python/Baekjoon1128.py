@@ -9,7 +9,7 @@ selectedArr = map(int, input().split(" "))
 
 
 for i in numArr:
-    count = 0
+    count = 0 
     for j in selectedArr:
         if numArr[i] == selectedArr[j]:
             numArr.pop(i)
