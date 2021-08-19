@@ -7,7 +7,7 @@ numArr = map(int, input().split(" "))
 selectedCount = int(input())
 selectedArr = map(int, input().split(" "))
 
-for i in numArr:  
+for i in numArr:
     count = 0
     for j in selectedArr:
         if numArr[i] == selectedArr[j]:
