@@ -21,6 +21,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/python" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="5bc28620-9122-40d8-bcad-cc672816684a" name="Default Changelist" comment="" />
@@ -29,7 +30,11 @@
       <option name="presentableId" value="Default" />
       <updated>1621217331419</updated>
       <workItem from="1621217333381" duration="7000" />
+      <workItem from="1629032653357" duration="34000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
