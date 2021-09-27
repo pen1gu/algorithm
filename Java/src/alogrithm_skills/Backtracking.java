@@ -3,7 +3,7 @@ package alogrithm_skills;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Backtracking { 
+public class Backtracking {
 
     public static List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> ret = new ArrayList<>();
@@ -25,7 +25,7 @@ public class Backtracking {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
         System.out.println();
     }
 }
