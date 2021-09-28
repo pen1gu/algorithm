@@ -13,7 +13,7 @@ public class Backtracking {
     }
 
     public static void backtrack(int[] nums, List<List<Integer>> ret, List<Integer> tmp) {
-        if (tmp.size() == nums.length){
+        if (tmp.size() == nums.length) {
             ret.add(new ArrayList<>(tmp));
             return;
         }
@@ -25,7 +25,7 @@ public class Backtracking {
         }
     }
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
         System.out.println();
     }
 }
